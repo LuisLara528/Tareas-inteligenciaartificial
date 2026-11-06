@@ -1,0 +1,17 @@
+name: 3×3 grid (start, goal, pit)
+kind: grid
+rows: 3
+cols: 3
+start: [0, 0]
+goal: [0, 2]
+pit: [2, 2]
+goal_reward: 1.0
+pit_reward: -1.0
+step_reward: 0.0
+actions: [N, E, S, W]
+alpha: 0.5
+gamma: 0.9
+epsilon: 0.25
+episodes: 400
+max_steps: 40
+seed: 3

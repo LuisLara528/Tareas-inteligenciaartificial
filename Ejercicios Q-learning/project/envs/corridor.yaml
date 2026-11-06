@@ -1,0 +1,25 @@
+name: Lecture 3-cell corridor
+kind: graph
+start: A
+actions: [L, R]
+alpha: 0.5
+gamma: 0.9
+epsilon: 0.25
+episodes: 80
+max_steps: 20
+seed: 2
+
+# Two episodes of R, R — program 02 replays the lecture table.
+walkthrough:
+  - [R, R]
+  - [R, R]
+
+states:
+  A:
+    L: {to: A, r: 0.0, terminal: false}
+    R: {to: B, r: 0.0, terminal: false}
+  B:
+    L: {to: A, r: 0.0, terminal: false}
+    R: {to: G, r: 1.0, terminal: true}
+  G:
+    terminal: true
